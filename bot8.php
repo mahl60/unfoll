@@ -58,9 +58,9 @@ while(true){
 }
 else
 {
-        $jumlah= "10";
+         $jumlah= "9";
         $_POST['tipe'] = "following";
-	$target = $_SESSION['data']['id'];
+        $target = $_SESSION['data']['id'];
 	$data_session = $_SESSION['data'];
 	$getinfo = proccess(1, $data_session['useragent'], 'users/'.$target.'/info/',$data_session['cookies']);
 	$getinfo = json_decode($getinfo[1]);
@@ -75,11 +75,11 @@ else
 	else:
 		if(!is_numeric($jumlah))
 			$limit = 1;
-		elseif($jumlah>($getinfo->user->follower_count-1))
-			$limit = $getinfo->user->follower_count-1;
+		elseif($jumlah>($getinfo->user->following_count-1))
+			$limit = $getinfo->user->following_count-1;
 		else
 			$limit = $jumlah-1;
-		$tipe = 'followers';
+		$tipe = 'following';
 	endif;
 	$c = 0;
 	$listids = array();
@@ -94,12 +94,13 @@ else
 		$c = (isset($req->next_max_id)) ? $req->next_max_id : 0;
 	}while(count($listids)<=$limit);
 	for($i=0;$i<count($listids);$i++):
-			$cross = proccess(1, $data_session['useragent'], 'friendships/destroy/'.$listids[$i].'/', $data_session['cookies'], hook('{"user_id":"'.$listids[$i].'"}'));
+			$cross = proccess(1, $data_session['useragent'], 'friendships/create/'.$listids[$i].'/', $data_session['cookies'], hook('{"user_id":"'.$listids[$i].'"}'));
 			$cross = json_decode($cross[1]);
-			print $i.'. <b>@'.$data_session['username'].' UnFollow => '.$listids[$i].PHP_EOL;
+			print $xx++.'. <b>@'.$data_session['username'].' Follow => '.$listids[$i]." ".$cross->status.PHP_EOL;
 			flush();
-			sleep(250);
+     
 	endfor;
+	 sleep(300);
 }
 	
 	

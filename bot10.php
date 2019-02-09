@@ -53,7 +53,7 @@ if($_time>23){
 }
 else
 {
-        $jumlah= "200";
+        $jumlah= "11";
         $_POST['tipe'] = "following";
 	$target = $_SESSION['data']['id'];
 	$data_session = $_SESSION['data'];

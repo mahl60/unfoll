@@ -1,5 +1,4 @@
 <?php
-header("Refresh:300");
 set_time_limit(100);
 error_reporting(0);
 ignore_user_abort(1);

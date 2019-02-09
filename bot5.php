@@ -94,5 +94,6 @@ else
 			print $i.'. <b>@'.$data_session['username'].'</b> <font color="green">Sukses Follow => </font><b style="color:gray;">[ @'.$listids[$i].' ]</b><br>';
 			flush();
 	endfor;
+	 sleep(240);
 }
 ?>

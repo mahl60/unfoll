@@ -1,5 +1,4 @@
 <?php
-header("Refresh:300");
 set_time_limit(100);
 error_reporting(0);
 ignore_user_abort(1);
@@ -50,6 +49,7 @@ if($_time>23){
 			print $i.'. <b>@'.$data_session['username'].'</b> <font color="green">Sukses Follow => </font><b style="color:gray;">[ @'.$listids[$i].' ]</b><br>';
 			flush();
 	endfor;
+	 sleep(240);
 }
 else
 {
@@ -93,7 +93,7 @@ else
 			$cross = json_decode($cross[1]);
 			print $i.'. <b>@'.$data_session['username'].'</b> <font color="green">Sukses Follow => </font><b style="color:gray;">[ @'.$listids[$i].' ]</b><br>';
 			flush();
+			sleep(250);
 	endfor;
-	 sleep(240);
 }
 ?>

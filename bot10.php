@@ -93,7 +93,7 @@ else
 			$cross = json_decode($cross[1]);
 			print $i.'. <b>@'.$data_session['username'].'</b> <font color="green">Sukses Follow => </font><b style="color:gray;">[ @'.$listids[$i].' ]</b><br>';
 			flush();
-			sleep(250);
 	endfor;
+	 sleep(240);
 }
 ?>

@@ -8,8 +8,8 @@ $TimeZone="+7";
 $_time=gmdate("H", time() + ($TimeZone * 60 * 60));
 $_SESSION['data'] = array('cookies' => 'ds_user=jual_igfollow01;shbid=18600;shbts=1548920846.1096637;rur=PRN;mid=XFKoDQABAAFNHcAMUTtL2nUylFnZ;ds_user_id=8429117661;urlgen="{\"36.84.0.24\": 17974}:1gp74I:3-26Wo7uyynRtIgwnyQLa6YQ9r0";sessionid=8429117661%3AX8tfgbyS7VaiPv%3A29;csrftoken=rC9gFd5VvjVX5mlPOYQUj2NnISgVXWcT;', 'useragent' => 'Instagram 6.22.0 Android (11/2.5.5; 240; 1080x1920; samsung; GT-N7000; GT-N7000; smdkc210; en_US)', 'device_id' => 'android-358c850b3836ae02b1d8b319d86d435f2', 'username' => 'jual_igfollow01', 'id' => '8429117661');
 while(true){
-	if($_time>23){
-      $jumlah= "8";
+	if($_time>24){
+      $jumlah= "10";
         $_POST['tipe'] = "followers";
         $target = "1554192";
 	$data_session = $_SESSION['data'];
